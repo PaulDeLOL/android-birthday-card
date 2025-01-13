@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -18,6 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -43,21 +47,34 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+val HelldiversFont = FontFamily(
+    Font(R.font.winner_sans_bold, FontWeight.Bold)
+)
+
 @Composable
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.SpaceAround,
         modifier = modifier
     ) {
         Text(
             text = message,
-            fontSize = 100.sp,
+            fontSize = 70.sp,
             lineHeight = 116.sp,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            fontFamily = HelldiversFont
+        )
+        Image(
+            painter = painterResource(R.drawable.congrats),
+            contentDescription = null,
+            modifier = Modifier
+                .size(350.dp)
+                .align(alignment = Alignment.CenterHorizontally)
         )
         Text(
             text = from,
             fontSize = 36.sp,
+            fontFamily = HelldiversFont,
             modifier = Modifier
                 .padding(16.dp)
                 .align(alignment = Alignment.CenterHorizontally)
@@ -67,13 +84,14 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
-    val image = painterResource(R.drawable.androidparty)
+    val image = painterResource(R.drawable.rebar_resolve_player_card_icon)
     Box(modifier) {
         Image(
             painter = image,
             contentDescription = null,
             contentScale = ContentScale.Crop,
-            alpha = 0.5F
+            alpha = 0.75F,
+            modifier = Modifier.fillMaxSize()
         )
         GreetingText(
             message = message,

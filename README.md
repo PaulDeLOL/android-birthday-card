@@ -6,3 +6,7 @@
 <h3>Update (January 13th, approx. 1:30 P.M.):</h3>
 
 - Completed "Build a simple app with text composables" section of Android course
+
+<h3>Update (January 13th, approx. 4:15 P.M.):</h3>
+
+- Completed "Add images to your Android app" section of Android course
