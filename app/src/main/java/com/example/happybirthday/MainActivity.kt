@@ -1,3 +1,16 @@
+/*
+ * Name: Pablo Guardia
+ * Date: January 13, 2025
+ * Assignment: Birthday Card App
+ * Due Date: January 19th, 2025
+ * About this project: Basic birthday card app using Android Studio and Jetpack Compose.
+ * The git repository has two branches, one following the Android Developer course to the letter
+ * and the other with a more personalized birthday card with my own customizations as a result
+ * of experimenting to solidify my understanding of Jetpack Compose.
+ * Git repository link: https://github.com/PaulDeLOL/android-birthday-card/tree/master
+ * All work below was performed by Pablo Guardia
+ */
+
 package com.example.happybirthday
 
 import android.os.Bundle
@@ -47,24 +60,28 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-val HelldiversFont = FontFamily(
+// Custom font added by me
+val CustomFont = FontFamily(
     Font(R.font.winner_sans_bold, FontWeight.Bold)
 )
 
 @Composable
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
+        // Vertical arrangement changed to add room for a second image
         verticalArrangement = Arrangement.SpaceAround,
         modifier = modifier
     ) {
         Text(
+            // Font family changed to custom font
             text = message,
             fontSize = 64.sp,
             lineHeight = 116.sp,
             textAlign = TextAlign.Center,
-            fontFamily = HelldiversFont
+            fontFamily = CustomFont
         )
         Image(
+            // Second image added
             painter = painterResource(R.drawable.congrats),
             contentDescription = null,
             modifier = Modifier
@@ -74,7 +91,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
         Text(
             text = from,
             fontSize = 36.sp,
-            fontFamily = HelldiversFont,
+            fontFamily = CustomFont,
             modifier = Modifier
                 .padding(16.dp)
                 .align(alignment = Alignment.CenterHorizontally)
@@ -84,6 +101,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
+    // Image changed from original given by Android Developer Course
     val image = painterResource(R.drawable.rebar_resolve_player_card_icon)
     Box(modifier) {
         Image(
