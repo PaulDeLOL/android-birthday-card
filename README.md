@@ -10,3 +10,8 @@
 <h3>Update (January 13th, approx. 4:15 P.M.):</h3>
 
 - Completed "Add images to your Android app" section of Android course
+
+<h3>Update (January 13th, approx. 5:15 P.M.):</h3>
+
+- Fully personalized birthday card with different images and font
+- Added comments
