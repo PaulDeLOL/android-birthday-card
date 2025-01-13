@@ -1,3 +1,16 @@
+/*
+ * Name: Pablo Guardia
+ * Date: January 13, 2025
+ * Assignment: Birthday Card App
+ * Due Date: January 19th, 2025
+ * About this project: Basic birthday card app using Android Studio and Jetpack Compose.
+ * The git repository has two branches, one following the Android Developer course to the letter
+ * and the other with a more personalized birthday card with my own customizations as a result
+ * of experimenting to solidify my understanding of Jetpack Compose.
+ * Git repository link: https://github.com/PaulDeLOL/android-birthday-card/tree/master
+ * All work below was performed by Pablo Guardia
+ */
+
 package com.example.happybirthday
 
 import android.os.Bundle
